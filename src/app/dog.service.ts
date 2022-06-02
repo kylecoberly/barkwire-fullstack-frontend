@@ -6,6 +6,9 @@ import {environment} from '../environments/environment';
 type DogsResponse = {
   dogs: Dog[];
 }
+type DogResponse = {
+  dog: Dog;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +32,9 @@ export class DogService {
 
   fetchDogs() {
     return this.http.get<DogsResponse>(`${environment.baseApiUrl}/dogs`)
+  }
+
+  addDog(dog: Dog) {
+    return this.http.post<DogResponse>(`${environment.baseApiUrl}/dogs`, dog)
   }
 }
