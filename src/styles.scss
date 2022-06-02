@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+
+body {
+  font-family: Inter, sans-serif;
+  padding: 32px 64px;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 36px;
+  margin-bottom: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 36px;
+}
+
+img {
+  max-width: 100%;
+}
