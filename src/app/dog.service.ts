@@ -1,6 +1,13 @@
 import {Injectable} from '@angular/core';
-import {of} from 'rxjs';
 import {Dog} from './models/Dog';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
+
+type DogsResponse = {
+  dogs: Dog[];
+}
+
+const dogsEndpoint = `${environment.baseApiUrl}/dogs`
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +27,9 @@ export class DogService {
     description: "Just the best bud!",
   }]
 
+  constructor(private http: HttpClient) {}
+
   fetchDogs() {
-    return of(this.dogs)
+    return this.http.get<DogsResponse>(dogsEndpoint)
   }
 }

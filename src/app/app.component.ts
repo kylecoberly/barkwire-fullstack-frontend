@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private dogService: DogService) {}
 
   ngOnInit() {
-    this.dogService.fetchDogs().subscribe(dogs => {
-      this.dogs = dogs
+    this.dogService.fetchDogs().subscribe(response => {
+      this.dogs = response.dogs
     })
   }
 }
