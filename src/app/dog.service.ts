@@ -7,8 +7,6 @@ type DogsResponse = {
   dogs: Dog[];
 }
 
-const dogsEndpoint = `${environment.baseApiUrl}/dogs`
-
 @Injectable({
   providedIn: 'root'
 })
@@ -30,6 +28,6 @@ export class DogService {
   constructor(private http: HttpClient) {}
 
   fetchDogs() {
-    return this.http.get<DogsResponse>(dogsEndpoint)
+    return this.http.get<DogsResponse>(`${environment.baseApiUrl}/dogs`)
   }
 }
