@@ -1,0 +1,16 @@
+.dog-search-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr auto;
+  max-width: 500px;
+  label {
+    position: absolute;
+    left: -9999px;
+  }
+  [type=search]{
+    grid-column: 1 / span 1;
+  }
+  [type=submit]{
+    grid-column: 2 / span 1;
+  }
+}

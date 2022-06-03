@@ -1,0 +1,15 @@
+.new-dog-form {
+  max-width: 300px;
+
+  textarea {
+    min-height: 100px;
+  }
+
+  [type=submit] {
+    background-color: hsl(240, 50%, 90%);
+    color: hsl(240, 50%, 10%);
+    border: none;
+    box-shadow: 0 2px 2px hsl(240, 10%, 90%);
+    font-size: 16px;
+  }
+}

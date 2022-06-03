@@ -37,4 +37,8 @@ export class DogService {
   addDog(dog: Dog) {
     return this.http.post<DogResponse>(`${environment.baseApiUrl}/dogs`, dog)
   }
+
+  search(searchTerm: string) {
+    return this.http.get<DogsResponse>(`${environment.baseApiUrl}/dogs/search?search=${searchTerm}`)
+  }
 }

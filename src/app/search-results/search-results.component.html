@@ -1,0 +1,4 @@
+<app-dogs-list *ngIf="results.length; else empty" [dogs]="results"></app-dogs-list>
+<ng-template #empty>
+  <p>Sorry, no results!</p>
+</ng-template>

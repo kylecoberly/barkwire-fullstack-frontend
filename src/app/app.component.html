@@ -4,25 +4,6 @@
 
 <main>
   <h2>Dogs</h2>
-  <form #newDogForm="ngForm" class="new-dog-form" (ngSubmit)="addDog(newDogForm.value)">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" ngModel />
-
-    <label for="image-url">Image</label>
-    <input type="url" name="imageUrl" id="image-url" ngModel />
-
-    <label for="description">Description</label>
-    <textarea type="url" name="description" id="description" ngModel></textarea>
-
-    <input type="submit" value="Add Dog" />
-  </form>
-  <ul>
-    <li *ngFor="let dog of dogs">
-      <app-dog-listing
-        [name]="dog.name"
-        [imageUrl]="dog.imageUrl"
-        [description]="dog.description"
-      ></app-dog-listing>
-    </li>
-  </ul>
+  <app-dog-search-form></app-dog-search-form>
+  <router-outlet></router-outlet>
 </main>
